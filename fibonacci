@@ -1,0 +1,22 @@
+#fiboiter is batter than fiborecure 
+# #fiboiter is take the time mainimam ass compar tu tha fiborecur
+# #and memory bhi kam leta hai fiborecur se
+def fiboiter(n):
+    prevNum=0
+    currentNum=1
+    for i in range(1,n):
+        prevprevNum=prevNum                               
+        prevNum=currentNum                                
+        currentNum=prevprevNum+prevNum                    
+    return currentNum
+def fiborecur(n):
+    if(n==0):
+        return 0
+    elif(n==1):
+        return 1
+    else:
+        return fiborecur(n-1)+fiborecur(n-2)
+# if_name_=="_main_":
+num=int(input("enter the number"))
+print(f"using recursion alue of fib({num}) is {fiborecur(num)}")
+print(f"using fiboiter alue of fib({num}) is {fiboiter(num)}") 
